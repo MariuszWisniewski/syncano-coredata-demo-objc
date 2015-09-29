@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apK-Di-YxL">
+                                <rect key="frame" x="16" y="28" width="117" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GtP-Ba-BDr"/>
+                                    <constraint firstAttribute="width" constant="117" id="YFk-Rd-Sn4"/>
+                                </constraints>
+                                <state key="normal" title="Download Books">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadBooksPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edl-ib-Msl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbo-oE-Mk5">
+                                <rect key="frame" x="141" y="28" width="127" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DlQ-l8-sgM"/>
+                                </constraints>
+                                <state key="normal" title="Download Authors">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadAuthorsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pwq-P6-aDK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr6-BR-pub">
+                                <rect key="frame" x="424" y="28" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZIP-eA-Uyd"/>
+                                    <constraint firstAttribute="width" constant="160" id="nxs-bD-H3g"/>
+                                </constraints>
+                                <state key="normal" title="Display From Database">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayFromDatabasePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L8J-xf-pVD"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a97-At-Zs9">
+                                <rect key="frame" x="0.0" y="66" width="600" height="542"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a97-At-Zs9" firstAttribute="top" secondItem="Lr6-BR-pub" secondAttribute="bottom" constant="8" id="6jA-vi-a3F"/>
+                            <constraint firstItem="apK-Di-YxL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BGh-fZ-lMs"/>
+                            <constraint firstItem="Hbo-oE-Mk5" firstAttribute="leading" secondItem="apK-Di-YxL" secondAttribute="trailing" constant="8" id="FTo-z4-lYk"/>
+                            <constraint firstItem="Lr6-BR-pub" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="GN6-lp-OCK"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="a97-At-Zs9" secondAttribute="bottom" constant="-8" id="IWH-ja-Uj2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a97-At-Zs9" secondAttribute="trailing" constant="-16" id="Pyc-C3-xyD"/>
+                            <constraint firstItem="a97-At-Zs9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="QWJ-fn-819"/>
+                            <constraint firstItem="Lr6-BR-pub" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Hbo-oE-Mk5" secondAttribute="trailing" constant="156" id="dff-4J-xB5"/>
+                            <constraint firstItem="Lr6-BR-pub" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fEl-8b-tFM"/>
+                            <constraint firstItem="apK-Di-YxL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="gdt-61-geM"/>
+                            <constraint firstItem="Hbo-oE-Mk5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mfu-lI-woQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="a97-At-Zs9" id="CIH-ni-Gc4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
